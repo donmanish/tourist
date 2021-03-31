@@ -1,0 +1,14 @@
+
+
+AddType application/x-httpd-php  .php .htm .html  .inc
+
+
+ErrorDocument 404 /phpT/errors/error_404.html
+
+ErrorDocument 403 /PhpT/errors/error_403.html
+
+
+Options -Indexes
+
+IndexIgnore *.pdf *.jpg*png 
+

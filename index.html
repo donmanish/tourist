@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1"  />	
+</head>
+<link rel="stylesheet" type="text/css" href="style/index.css">
+<link rel="stylesheet" type="text/css" href="style/media.css">
+
+<body onload="fun()" style="margin:0">
+
+
+<div id="loader"></div>
+
+<!-----------navigation and sticky ----------------------->
+
+<div class="container "   id="mydiv" class="animate-bottom " >
+	<div class="header glowbox ">
+		<div class="box3 "><div class="logo glowbox"><img src="img/logo.png"></div></div>
+		<div class="box3 glowbox"><div class="text glow">FESTTOUR</div></div>
+		<div class="box3 glowbox"></div>
+	</div>
+	<!----------------nav-------------------------->
+	<div class="nav glow" id="nav">
+		<div class="nav-center">
+			 <a href="index.html" class="active">Home</a>
+			 <a href="about.html">About</a>
+             <a href="contact.html">Contact</a>
+		</div>
+		<div class="nav-right">
+    	<input type="button" onclick="login()" name="submit" class="loginbtn glow"  value="login">
+        </div>
+   </div>   
+ <!--------------------------------------------------login page----------------------------------------------------->
+ <div class="box ">
+
+	<form class="boxy login glowbox " id="login" method="POST" action="" enctype="multipart/form-data">
+	<span class="closebtn">&times</span>
+	<center>
+	<p class="txt glow">LOGIN PAGE</p>
+	<img src="img/lon.png" class="img_login" alt="avater" width="100" height="100">
+	<input type="text" class="username" name="username" placeholder="Username" width="100px">
+	<input type="text" class="password" name="password" placeholder="password">
+	<input type="submit" name="login" class ="btn" placeholder="submit">
+	</center>
+	<p class="line" id="signup" onclick="signup()">Signup ?</p>
+	<p class="line" onclick="forget()" >Forget password ?</p>
+	<p class="line" onclick="update()" >Update password ?</p>
+	</form> 
+     <?php include "php/login.php" ?>
+
+	<form class="boxy sign glowbox " id="sign" method="POST" enctype="multipart/form-data">
+    <span class="closebtn">&times</span>
+	<center>
+	<p class="txt glow">SIGNUP PAGE</p>
+	<img src="img/lon.png" class="img_login circle" alt="avater"  width="100" height="100" >
+	<label class="file circle">ImageUpload<input type="file"   name="photo" ></label>
+	<input type="text" class="username " name="username" placeholder="Username" width="100px">
+	<input type="text" class="password " name="password" placeholder="password">
+	<input type="text" class="password " name="c_password" placeholder="confirm-password">
+	<input type="submit"  name="signup" class ="btn" placeholder="submit">
+	</center>
+	</form>
+	<?php include "php/signup.php" ?>
+
+	<form class="boxy sign glowbox " id="forget" method="POST" enctype="multipart/form-data">
+    <span class="closebtn">&times</span>
+	<center>
+	<p class="txt glow">FORGET PASSWORD</p>
+	<input type="text" class="password " name="password" placeholder="password">
+	<input type="text" class="password " name="c_password" placeholder="confirm-password">
+	<input type="submit"  name="submit" class ="btn" placeholder="submit">
+	</center>
+	</form>
+   <?php include "php/forget.php" ?>
+
+	<form class="boxy sign glowbox " id="update" method="POST" enctype="multipart/form-data" >
+    <span class="closebtn">&times</span>
+	<center>
+	<p class="txt glow">UPDATE PAGE</p>
+	<img src="img/lon.png" class="img_login circle" alt="avater" width="100" height="100" >
+	<label class="file circle">ImageUpload<input type="file"   name="photo" ></label>
+	<input type="text" class="username " name="username" placeholder="Username" width="100px">
+	<input type="text" class="password " name="password" placeholder="password">
+	<input type="text" class="password " name="c_password" placeholder="confirm-password">
+	<input type="submit"  name="submit" class ="btn" placeholder="submit">
+	</center>
+	</form>
+	<?php include "php/update.php" ?>
+
+
+</div>
+
+<!----------------------------------------------------------->
+<!-----------------------------slideshow--------------------->
+
+	<div class="slideshow" id="slideshow">
+		<div class="slideshow-container">
+	
+    <div class="mySlides fade">
+    	<div class="numbertext glowbox"></div>
+    	<img src="img/diwali.jpg" style="width: 100%">
+    </div>
+    <div class="mySlides fade">
+    	<div class="numbertext glowbox"></div>
+    	<img src="img/holi.jpg" style="width: 100%">
+    </div>
+    <div class="mySlides fade">
+    	<div class="numbertext glowbox"></div>
+    	<img src="img/bali.jpg" style="width: 100%">
+    </div>
+
+  
+
+</div>
+
+<br>
+
+<div style="text-align: center">
+	<span class="dot" ></span>
+	<span class="dot" ></span>
+	<span class="dot" ></span>
+
+</div>
+<!-------------------typeriter----------------------------->
+                      <div class="typewriter glowbox" >
+	                        <p id="demo"></p>
+                      </div>
+<!----------------------------------------------------------------------------------------->
+	</div>
+
+<!---------------------------------------------------------------------------------------------------------------->
+
+<!---------------------------------------video and image--------------------------------------------------------------------------->
+
+	<div class="slide2 block clearfix "  id="slide2">
+		<div class="imagecollection pad  block clearfix">
+			<div class="imagerow clearfix" >
+				<div class="imagecol"><img src="collection/image/dussehra.jpg"></div>
+				<div class="imagecol"><img src="collection/image/lodi.jpg"></div>
+				<div class="imagecol"><img src="collection/image/pongal.jpg"></div>
+				<div class="imagecol"><img src="collection/image/pulikali.jpg"></div>
+			</div>
+			   
+				<div class="see">
+					<center><a href="image.html"><p class="seemore">see more image</p></a></center>
+				</div>
+			
+             
+		</div>
+		<div class="videocollection pad block ">
+			<video controls autoplay muted  loop><source src="collection/video/festival.mp4" type="video/mp4"  ><source src="collection/video/festival.ogg" type="video/ogg" ></video>
+			<div class="set">
+			<div class="see">
+				<center><a href="video.html"><p class="seemore">see more video</p></a></center>
+			</div>
+		</div>
+		</div>
+		 
+</div>
+
+<!---------------------------------------------------------------------------------------------------------------------------------------->
+
+<!-------------------------imahe and questes ---------------------------------------------------------------------------------------------->
+	<div class="slide3 block clearfix">
+		<div class="quotes-container">
+
+	<div class="quotes">
+		<q>A national festival is an occasion to refine and rebuild the national character.</q>
+		<p class="author">Narendra Modi</p>
+	</div>
+	<div class="quotes">
+		<q>The great festivals exist to bear witness to our connection with the whole universe, and to help us use our powers of feeling and thinking in such a way that we become fully aware of this connection.</q>
+		<p class="author">Matthew Barton</p>
+	</div>
+	<div class="quotes">
+		<q>Festivals become a family because you start seeing the same people.</q>
+		<p class="author">Phillipp Wolter</p>
+	</div>
+
+	<a class="prevq" onclick="plusquote (-1)"><</a>
+	<a class="nextq" onclick="plusquote (1)">></a>
+
+</div>
+	
+
+		
+	</div>
+<!------------------------------------------------------------------------------------------------------------------------------------------>
+	<div class="footer clearfix glowbox  "  id="footer">
+		<div class="box1">contact:977625879</div>
+		<div class="box1">|</div>
+		<div class="box1"> copywrite: gmail@com.in</div>
+	</div>
+
+</div>
+</div>
+
+
+<script type="text/javascript" src="js/index.js"></script>
+</body>
+</html>

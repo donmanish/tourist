@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1"  />	
+</head>
+<link rel="stylesheet" type="text/css" href="style/index.css">
+<link rel="stylesheet" type="text/css" href="style/media.css">
+<style>
+	*{
+        margin: 0;
+        font-family:Arial, Helvetica, sans-serif;
+        box-sizing: border-box;
+	}
+	.profile{
+  height: 100px;
+  width: 100px;
+  border-radius: 50px;
+}
+.profile img{
+	border-radius: 50px;
+	width: 100px;
+	height: 100px;
+
+}
+.register{
+	color:orange;
+}
+
+</style>
+
+<body onload="fun()" style="margin:0">
+
+
+<div id="loader"></div>
+<div class="container "   id="mydiv" class="animate-bottom " >
+	<div class="header glowbox ">
+		<?php session_start(); ?>
+		<div class="box3 "><div class="profile glowbox"><img src="php/imagedb/<?php echo $_SESSION['photo']; ?>" ></div></div>
+		<div class="box3 glowbox"><div class="text glow">FESTIVAL NAME</div></div>
+		<div class="box3 glow" width="50px"><?php 
+            echo $_SESSION['username']; ?></div>
+	</div>
+	<!----------------nav-------------------------->
+	<div class="nav glow" id="nav">
+		<div class="nav-center">
+			 <a href="index.html" class="active">Home</a>
+			 <a href="about.html">About</a>
+             <a href="contact.html">Contact</a>
+		</div>
+		<div class="nav-right">
+    	<input type="button" onclick="logout()" name="submit" class="loginbtn glow"  value="logout">
+        </div>
+   </div>   
+</div>
+<div class="register">
+
+</div>
+<script type="text/javascript" src="js/index.js"></script>
+</body>
+</html>
